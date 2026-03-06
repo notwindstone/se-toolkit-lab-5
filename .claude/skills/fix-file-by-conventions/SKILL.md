@@ -9,7 +9,7 @@ Fix convention violations in a file using the report produced by `/review-file-b
 ## Steps
 
 1. Parse `$ARGUMENTS` to get the file path. Accept paths under `lab/tasks/` (e.g., `lab/tasks/setup.md`, `lab/tasks/required/task-2.md`) or `wiki/` (e.g., `wiki/web-development.md`). If the path is missing or does not point to a file under one of these directories, ask the user.
-2. Derive the report path: `tmp/review-file-by-conventions/<repo-root-path>`, where `<repo-root-path>` is the target file's path from the repository root (e.g., `tmp/review-file-by-conventions/lab/tasks/required/task-1.md` for `lab/tasks/required/task-1.md`, `tmp/review-file-by-conventions/wiki/web-development.md` for `wiki/web-development.md`). If the report file does not exist, tell the user to run `/review-file-by-conventions <path>` first and stop.
+2. Derive the report path: `instructors/file-reviews/<repo-root-path>`, where `<repo-root-path>` is the target file's path from the repository root (e.g., `instructors/file-reviews/lab/tasks/required/task-1.md` for `lab/tasks/required/task-1.md`, `instructors/file-reviews/wiki/web-development.md` for `wiki/web-development.md`). If the report file does not exist, tell the user to run `/review-file-by-conventions <path>` first and stop.
 3. Read the report file.
 4. Read the target file.
 5. Read the convention files referenced in the report header so every fix is grounded in the actual convention text:
