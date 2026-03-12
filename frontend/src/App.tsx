@@ -94,6 +94,9 @@ function App() {
         <button className="btn-disconnect" onClick={handleDisconnect}>
           Disconnect
         </button>
+        <a className="btn" href="/dashboard">
+          Go to Dashboard
+        </a>
       </header>
 
       {fetchState.status === 'loading' && <p>Loading...</p>}
